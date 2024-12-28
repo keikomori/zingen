@@ -1,6 +1,6 @@
 .btn {
-    --btn-bg-color: var(--text-color-primary);
-    --btn-color: var(--bg-color)
+    --btn-bg-color: var(--text-color-primary) ;
+    --btn-color: var(--bg-color);
     border: 0;
     background-color: transparent;
 
@@ -11,7 +11,7 @@
 
     border-radius: .5rem;
 
-    font: var(--fw-md) var(-fs-base)/1.5rem var(--ff-sans);
+    font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
 
     cursor: pointer;
 
@@ -20,14 +20,14 @@
 }
 
 .btn:hover {
-    background-color: linear-gradient(
+    --btn-bg-color: linear-gradient(
         90deg,
         var(--brand-color-secondary) 0%,
         var(--brand-color-primary) 100%
     );
-    --btn-color: var(--surface-color);
+    --btn-color:  var(--surface-color);
 
-    --webkit-background-clip: initial;
+    -webkit-background-clip: initial;
     background-clip: initial;
     color: var(--btn-color);
 }
@@ -47,29 +47,29 @@
     font-size: 1.125rem;
 }
 
-.btn[arial-label] {
-    position: relative;
+.btn[aria-label] {
+position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        border-radius: inherit;
-        inset: 0.09375rem;
-        background: var(--bg-color);
-    }
+&::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 1px;
+    background-color: var(--bg-color);
+}
 
     &::after {
-        content: attr(arial-label);
+        content: attr(aria-label);
         background: var(--btn-bg-color);
-        --webkit-background-clip: text;
+        -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        position : relative;
+        position: relative;
         z-index: 1;
     }
 }
 
-@media (width >= 80em) {    
+@media (width >= 80em){
     .btn-sm {
         padding: .75rem 1.5rem;
         font-size: var(--fs-base);
@@ -79,5 +79,4 @@
         padding: 1rem 2rem;
         font-size: 1.125rem;
     }
-
 }

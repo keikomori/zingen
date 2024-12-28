@@ -11,12 +11,13 @@
 }
 
 .px-lg {
-    padding-block: var(--px-lg);
+    padding-inline: var(--px-lg);
 }
 
 .container {
     --max-width: 375px;
     width: min(var(--max-width), 100% - var(--px-lg) * 2);
+   /* border: solid violet;*/
     margin-inline: auto;
 }
 
@@ -37,7 +38,7 @@
     align-items: center;
 }
 
-.gap {
+.gap-1 {
     gap: 1rem;
 }
 
@@ -49,9 +50,9 @@
     display: grid;
 }
 
-@media (width >= 50em) {
+@media (width >= 80em) {
     .container {
-        --max-width: 50rem;
+        --max-width: 80rem;
     }
 
     .desktop-only {
@@ -60,6 +61,6 @@
 
     .even-columns {
         grid-auto-flow: column;
-        grid-column: 1fr;
+        grid-auto-columns: 1fr;
     }
 }
