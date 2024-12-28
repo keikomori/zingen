@@ -33,17 +33,25 @@
     display: flex;
 }
 
+.items-center {
+    align-items: center;
+}
+
 .gap {
     gap: 1rem;
+}
+
+.gap-1\.5 {
+    gap: 1.5rem;
 }
 
 .grid {
     display: grid;
 }
 
-@media (width >= 80em) {
+@media (width >= 50em) {
     .container {
-        --max-width: 80rem;
+        --max-width: 50rem;
     }
 
     .desktop-only {
